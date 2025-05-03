@@ -1,0 +1,109 @@
+.section {
+  margin: 10px;
+  text-align: center;
+}
+
+.section-title {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Submenu styles */
+.submenu {
+  list-style: none;
+  margin-top: 5px;
+  display: none;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.submenu.open {
+  display: flex;
+}
+
+.submenu li {
+  margin: 5px 0;
+}
+
+.submenu a {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+/* Adjustments for hamburger open */
+.menu.open .submenu {
+  display: flex;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  position: relative;
+}
+
+/* Hamburger Button */
+.hamburger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* Hidden by default (desktop) */
+}
+
+/* Menu List */
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: max-height 0.3s ease-out;
+}
+
+.menu li {
+  margin: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Page Content */
+.page-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger */
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .menu.open {
+    max-height: 500px; /* Expand when open */
+  }
+}
